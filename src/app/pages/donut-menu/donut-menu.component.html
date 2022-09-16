@@ -1,0 +1,6 @@
+<h2>Our Menulicious</h2>
+<ul>
+  <li *ngFor="let donut of donutList">
+    <a [routerLink]="['/display', donut.id]">{{ donut.name }}</a>
+  </li>
+</ul>

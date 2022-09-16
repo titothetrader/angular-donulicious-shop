@@ -1,0 +1,19 @@
+<h1>Donut</h1>
+<div>
+  <button (click)="addToCart()">Add to cart</button>
+</div>
+<div>
+  <p>Name: {{ donut?.name }}</p>
+  <p>Calories: {{ donut?.calories }}</p>
+  <p>Extra:</p>
+  <ul>
+    <li *ngFor="let item of donut?.extras">{{ item }}</li>
+  </ul>
+  <div *ngIf="donut?.photo === null">No Image Provided</div>
+  <div *ngIf="donut?.photo !== null">
+    <img src="{{ donut?.photo }}" height="300" />
+    <div *ngIf="donut?.photo_attribution !== null">
+      <p>Source: {{ donut?.photo_attribution }}</p>
+    </div>
+  </div>
+</div>
